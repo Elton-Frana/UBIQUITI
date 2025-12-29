@@ -1,0 +1,70 @@
+UNIFI NETWORK 
+
+TOPOLOGIA DE GERENCIAMENTO DE DISPOSITIVOS UNIFI
+
+CENTRALIZADO USANDO O SOFTWARE GRATUITO UNIFI NETWORK APPLICATION.
+DISTRIBUIDO USANDO CLOUD KEY OU DISPOSITIVOS UDM, QUE TEM O SOFTWARE CONTROLADOR EMBARCADO EM 
+CADA CLIENTE E GERENCIANDO OS CLOUD KEY NO SERVICO DA UBIQUITI .
+
+Link script instalação unifi controller DEBIAN e derivados .
+Nestes links estão hospedados os scripts que fazem a instalação automatizada do unifi controller e de seus pré-requisitos automaticamente .
+
+#️⃣ https://community.ui.com/questions/UniFi-Installation-Scripts-or-UniFi-Easy-Update-Script-or-UniFi-Lets-Encrypt-or-UniFi-Easy-Encrypt-/ccbc7530-dd61-40a7-82ec-22b17f027776
+
+VERIFICAR VERSÕES DISPONÍVEIS
+
+#️⃣ https://glennr.nl/s/unifi-network-controller
+
+FAZER A INSTALAÇÃO UNIFI NETWORK APPLICATION
+#️⃣ apt-get update; apt-get install ca-certificates wget -y
+#️⃣ wget https://get.glennr.nl/unifi/install/unifi-6.2.26.sh
+#️⃣ bash unifi-6.2.26.sh
+#️⃣ https://ip.of.your.server:8443
+
+COMANDOS IMPORTANTES
+#️⃣ set-inform http://192.168.150.126:8080/inform
+#️⃣ systemctl status unifi
+#️⃣ systemctl start unifi
+#️⃣ systemctl restart unifi
+
+ARQUIVOS LOG
+#️⃣ /var/log/unifi/server.log
+#️⃣ /var/log/unifi/mongod.log
+
+MIGRAÇÃO DE SERVIDOR UNIFI CONTROLLER
+#️⃣ Acessar o unifi controller atual e remover o unifi do controlador
+#️⃣ seleciona o unifi / config / manage device / forget this device / forget
+
+COMANDO ADOÇÃO
+# Acessar o unifi via ssh com o usuário ubnt e senha ubnt (padrão) e rodar o comando para que o unifi seja adotado no controlador do servidor novo .
+
+# set-inform http://192.168.150.125:8080/inform
+
+CONFIGURAR QOS LIMITE DE BANDA
+# Configurações / Profiles / Bandwidth Profile /
+
+Criar os perfil de com a banda desejada para cada SSID
+
+RESET DO UNIFI VIA SSH
+# syswrapper.sh restore-default
+
+ATUALIAZACAO VIA SSH
+# upgrade + link_da_atualizacao_do_firmware
+
+CONFIGURAR VLAN UNIFI NETWORK
+SETTINGS>NETWORK>CREATE NEW NETWORK
+CONFIGURAÇÃO DAS VLANS E REDES
+
+
+
+
+
+
+
+CONFIGURACAO DA VLAN DE GERENCIAMENTO ( POR QUAL VLAN SERA O ACESSO PARA GERENCIAMENTO ).
+
+
+TROUBLESHOOTING
+UNIFI NAO CONECTA NO UNIFI CONTROLLER REMOTO NEM VIA VPN APENAS NO UNIFI CONTROLLER LOCAL
+
+#Tive um caso e resolveu trocando o injetor POE

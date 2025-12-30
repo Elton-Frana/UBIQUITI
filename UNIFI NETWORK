@@ -38,31 +38,24 @@ MIGRAÇÃO DE SERVIDOR UNIFI CONTROLLER
 COMANDO ADOÇÃO
 # Acessar o unifi via ssh com o usuário ubnt e senha ubnt (padrão) e rodar o comando para que o unifi seja adotado no controlador do servidor novo .
 
-# set-inform http://192.168.150.125:8080/inform
+#️⃣ set-inform http://192.168.150.125:8080/inform
 
 CONFIGURAR QOS LIMITE DE BANDA
-# Configurações / Profiles / Bandwidth Profile /
+#️⃣ Configurações / Profiles / Bandwidth Profile /
 
 Criar os perfil de com a banda desejada para cada SSID
 
 RESET DO UNIFI VIA SSH
-# syswrapper.sh restore-default
+#️⃣ syswrapper.sh restore-default
 
 ATUALIAZACAO VIA SSH
-# upgrade + link_da_atualizacao_do_firmware
+#️⃣ upgrade + link_da_atualizacao_do_firmware
 
 CONFIGURAR VLAN UNIFI NETWORK
-SETTINGS>NETWORK>CREATE NEW NETWORK
+#️⃣ SETTINGS>NETWORK>CREATE NEW NETWORK
 CONFIGURAÇÃO DAS VLANS E REDES
 
-
-
-
-
-
-
 CONFIGURACAO DA VLAN DE GERENCIAMENTO ( POR QUAL VLAN SERA O ACESSO PARA GERENCIAMENTO ).
-
 
 TROUBLESHOOTING
 UNIFI NAO CONECTA NO UNIFI CONTROLLER REMOTO NEM VIA VPN APENAS NO UNIFI CONTROLLER LOCAL
